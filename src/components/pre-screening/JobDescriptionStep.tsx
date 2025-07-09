@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Target, Briefcase, ArrowRight, Trophy, Rocket } from "lucide-react";
+import { Target, Briefcase, ArrowRight } from "lucide-react";
 import { JobPosition } from "@/types/job-positions";
 
 interface JobDescriptionStepProps {
