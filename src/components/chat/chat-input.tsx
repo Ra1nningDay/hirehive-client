@@ -55,7 +55,7 @@ export function ChatInput({ onSend, isLoading }: ChatInputProps) {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={handleKeyDown}
-            placeholder="🎮 Type your message or press mic to start the game! 🎯"
+            placeholder="Type your message to start the game! 🎯"
             className="min-h-[60px] resize-none pr-16 rounded-2xl border-2 border-[#5c4394]/30 focus:border-[#f28b1b] transition-all duration-300 text-base font-medium shadow-lg"
             maxLength={1000}
             disabled={isLoading || isUploading || isRecording}

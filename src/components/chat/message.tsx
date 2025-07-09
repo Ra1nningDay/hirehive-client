@@ -1,9 +1,9 @@
 import { Message as MessageType } from "@/types/chat";
 import { cn } from "@/lib/utils";
 import { Avatar } from "@/components/ui/avatar";
+import { Bot } from "lucide-react";
 import { User } from "lucide-react";
 import { format } from "date-fns";
-import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useChatStore } from "@/store/use-chat-store";
 
@@ -50,14 +50,9 @@ export function Message({ message }: MessageProps) {
     >
       {!isUser && (
         <div className="relative">
-          <Image
-            src="/logo.png"
-            alt="Hive AI Bot"
-            width={20}
-            height={20}
-            className="relative h-10 w-10 rounded-full border-3 border-[#f28b1b] bg-white shadow-lg"
-            priority
-          />
+          <Avatar className="relative h-10 w-10 bg-gradient-to-r from-[#f28b1b] to-[#ff9d3a] rounded-full border-3 border-[#f28b1b] shadow-lg flex items-center justify-center">
+            <Bot className="h-6 w-6 text-white" />
+          </Avatar>
         </div>
       )}
 

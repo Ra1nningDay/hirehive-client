@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { RefreshCcw } from "lucide-react";
-import Image from "next/image";
+import { RefreshCcw, Bot } from "lucide-react";
+import { Avatar } from "@/components/ui/avatar";
 
 interface ChatHeaderProps {
   onReset: () => void;
@@ -19,14 +19,9 @@ export function ChatHeader({ onReset }: ChatHeaderProps) {
         <div className="flex items-center justify-between h-20 px-4 max-w-4xl mx-auto">
           <div className="flex items-center gap-4">
             <div className="relative">
-              <Image
-                src="/logo.png"
-                alt="Hive AI Logo"
-                width={56}
-                height={56}
-                className="relative h-14 w-14 rounded-full border-3 border-white bg-white shadow-lg"
-                priority
-              />
+              <Avatar className="relative h-14 w-14 bg-gradient-to-r from-[#f28b1b] to-[#ff9d3a] rounded-full border-3 border-white shadow-lg flex items-center justify-center">
+                <Bot className="h-8 w-8 text-white" />
+              </Avatar>
             </div>
             <div className="flex flex-col">
               <h1 className="text-3xl font-black text-white drop-shadow-lg tracking-wide">
